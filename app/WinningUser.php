@@ -4,10 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
-
-class Location extends Model
+class WinningUser extends Model
 {
     use SoftDeletes;
-    protected $table = 'locations';
-    protected $fillable = ['name','address'];
+    protected $table = 'winning_users';
+    protected $fillable = ['name', 'winning_number_count'];
 }

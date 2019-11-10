@@ -16,5 +16,12 @@ Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
 
 
 Auth::routes();
+Route::group(['middleware' => ['auth']], function () {
+// Admin Portal
 Route::resource('/draw', 'AdminController');
-// Route::get('job/{job}/restore', 'JobController@restore');
+// Member Portal
+Route::resource('/member', 'MemberController');
+});
+
+//Website
+Route::get('/result', 'ResultController@showResult');

@@ -2,8 +2,8 @@
 
 use Illuminate\Database\Seeder;
 
-use App\Role;
 use App\User;
+use App\PrizeType;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,7 +15,10 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         User::truncate();
+        PrizeType::truncate();
         // $this->call(UsersTableSeeder::class);
         $this->call(UsersTableSeeder::class);
+        $this->call(PrizeTableSeeder::class);
+
     }
 }
