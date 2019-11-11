@@ -49,3 +49,8 @@ php artisan serve
 ```
 
 and visit [http://localhost:8000/](http://localhost:8000/) to see the application in action.
+
+
+##Admin Login Credential
+username - admin@gmail.com
+password - password
